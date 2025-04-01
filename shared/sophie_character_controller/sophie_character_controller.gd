@@ -12,10 +12,10 @@ signal coin_collected
 @export var sliding_threshold_velocity := 5.5
 
 @export_group("Jump and throwback")
-@export var jump_orthogonal_control := 4
+@export var jump_orthogonal_control := 7
 @export var jump_parallel_control := 0.7
 @export var terminal_velocity := 20
-@export var first_jump_force := 9.0
+@export var first_jump_force := 13.0
 @export var floor_inertia_frames := 5
 @export var max_frames_holding_jump := 10
 @export var gravity := 35
