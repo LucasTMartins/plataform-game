@@ -50,7 +50,7 @@ var coins = 0
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	camera_controller.setup(self)
+	#camera_controller.setup(self)
 
 func _physics_process(delta: float) -> void:
 	handle_effects(delta)
@@ -182,8 +182,8 @@ func _physics_process(delta: float) -> void:
 	
 	_floor_slide_particles.emitting = is_sliding
 	
-	if get_real_velocity().length() > 0.01:
-		camera_controller.update_camera(global_position, delta)
+	#if get_real_velocity().length() > 0.01:
+		#camera_controller.update_camera(global_position, delta)
 
 	move_and_slide()
 
@@ -214,7 +214,7 @@ func _get_camera_oriented_input() -> Vector3:
 	input.x = -raw_input.x * sqrt(1.0 - raw_input.y * raw_input.y / 2.0)
 	input.z = -raw_input.y * sqrt(1.0 - raw_input.x * raw_input.x / 2.0)
 
-	input = camera_controller.global_transform.basis * input
+	#input = camera_controller.global_transform.basis * input
 	input.y = 0.0
 	return input.normalized()
 
